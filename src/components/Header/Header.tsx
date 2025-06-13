@@ -2,18 +2,19 @@ import { HiOutlineMenu } from "react-icons/hi";
 import logo from '../../assets/logo.png'
 import styles from './Header.styles.module.css'
 import Sidebar from "../Sidebar/Sidebar.container";
+import { Link } from "react-router-dom";
 
 interface HeaderProps {
     showSidebar: boolean
     toggleSidebar: () => void
+    navList: { name: string, path: string }[]
 }
 
 const Header = ({
     showSidebar,
-    toggleSidebar
+    toggleSidebar,
+    navList
 }: HeaderProps) => {
-
-    const navItems = ['Home', 'Top Movies', 'Favorites', "Genders", "Releases"]
 
     return (
         <header className={styles.header}>
@@ -23,11 +24,11 @@ const Header = ({
             </picture>
 
             <nav>
-                <ul className={styles.nav_items}>
-                    {navItems.map(item => <li><a href="#">{item}</a></li>)}
+                <ul className={styles.nav_list}>
+                    {navList.map(({ name, path }) => <li key={name}><Link to={path}>{name}</Link></li>)}
                 </ul>
 
-                {showSidebar && <Sidebar toggleSidebar={toggleSidebar} NavItems={navItems} />}
+                {showSidebar && <Sidebar toggleSidebar={toggleSidebar} NavList={navList} />}
 
             </nav>
         </header>

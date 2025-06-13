@@ -1,16 +1,16 @@
 import Sidebar from './Sidebar'
 
 interface SidebarProps {
-    NavItems: string[]
+    NavList: { name: string, path: string }[]
     toggleSidebar: () => void
 }
 
 const SidebarContainer = ({
-    NavItems,
+    NavList,
     toggleSidebar
 }: SidebarProps) => {
     return (
-        <Sidebar toggleSidebar={toggleSidebar} NavItems={NavItems} />
+        <Sidebar toggleSidebar={toggleSidebar} NavList={NavList} />
     )
 }
 

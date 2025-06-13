@@ -1,13 +1,14 @@
 import { IoCloseOutline } from "react-icons/io5";
 import styles from './Sidebar.styles.module.css'
+import { Link } from "react-router-dom";
 
 interface SidebarProps {
-    NavItems: string[]
+    NavList: { name: string, path: string }[]
     toggleSidebar: () => void
 }
 
 const Sidebar = ({
-    NavItems,
+    NavList,
     toggleSidebar
 }: SidebarProps) => {
 
@@ -15,7 +16,7 @@ const Sidebar = ({
         <div className={styles.sidebar}>
             <IoCloseOutline className={styles.close} onClick={toggleSidebar} />
             <ul className={styles.nav_items}>
-                {NavItems.map(item => <li><a href="#">{item}</a></li>)}
+                {NavList.map(({ name, path }) => <li key={name}><Link to={path}>{name}</Link></li>)}
             </ul>
         </div>
     )
