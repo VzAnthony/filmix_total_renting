@@ -1,0 +1,38 @@
+.sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none
+}
+
+.close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-size: 40px;
+    color: var(--primary-text-color);
+}
+
+.nav_items {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 16px;
+    background-color: var(--primary-color);
+}
+
+.nav_items li a {
+    text-decoration: none;
+    color: var(--primary-text-color);
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        display: block;
+    }
+}
