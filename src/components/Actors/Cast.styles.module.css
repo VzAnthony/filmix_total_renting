@@ -1,0 +1,32 @@
+.cast_list {
+    padding: 1rem 0;
+}
+
+.cast_item {
+    width: 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0 auto;
+}
+
+.cast_picture {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #eee;
+    display: block;
+    flex-shrink: 0;
+}
+
+.cast_name {
+    margin-top: 0.5rem;
+    text-align: center;
+    font-size: 0.85rem;
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: break-word;
+    line-height: 1.2;
+}

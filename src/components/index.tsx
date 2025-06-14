@@ -1,1 +1,7 @@
-export { default as Header } from './Header/Header.container' 
+export { default as Header } from './Header/Header.container'
+export { default as Movie } from './Movie/Movie.container'
+export { default as Cast } from './Actors/Cast.container'
+export { default as Carousel } from './Carousel/Carousel.container'
+export { default as Posters } from './Posters/Posters.container'
+export { default as Tag } from './Tag/Tag.container'
+export { default as MovieList } from './MovieList/MovieList.container'
