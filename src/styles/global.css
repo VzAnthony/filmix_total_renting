@@ -11,6 +11,16 @@ body {
   line-height: 1.5;
 }
 
+section {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+ul {
+  list-style: none;
+}
+
 #root {
   min-height: 100vh;
   display: flex;

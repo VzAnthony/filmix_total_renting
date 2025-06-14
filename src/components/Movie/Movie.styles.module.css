@@ -1,0 +1,39 @@
+.movie {
+    border-radius: 8px;
+    width: 100%;
+}
+
+.movie_picture {
+    display: block;
+    position: relative;
+}
+
+.movie_picture img {
+    border-radius: 8px;
+    width: 100%;
+    height: auto;
+    box-shadow: 0 0 30px #000;
+}
+
+.movie_picture img:hover+.overview {
+    visibility: visible;
+}
+
+.overview {
+    position: absolute;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 8px;
+    display: block;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 8px;
+    visibility: hidden;
+}
+
+.overview:hover {
+    visibility: visible;
+}
