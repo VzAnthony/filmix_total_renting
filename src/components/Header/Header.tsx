@@ -18,19 +18,21 @@ const Header = ({
 
     return (
         <header className={styles.header}>
-            <HiOutlineMenu className={styles.menu} onClick={toggleSidebar} />
-            <picture className={styles.picture}>
-                <img className={styles.logo} src={logo} alt="logo" />
-            </picture>
+            <div className={styles.header_container}>
+                <HiOutlineMenu className={styles.menu} onClick={toggleSidebar} />
+                <picture className={styles.picture}>
+                    <img className={styles.logo} src={logo} alt="logo" />
+                </picture>
 
-            <nav>
-                <ul className={styles.nav_list}>
-                    {navList.map(({ name, path }) => <li key={name}><Link to={path}>{name}</Link></li>)}
-                </ul>
+                <nav>
+                    <ul className={styles.nav_list}>
+                        {navList.map(({ name, path }) => <li key={name}><Link to={path}>{name}</Link></li>)}
+                    </ul>
 
-                {showSidebar && <Sidebar toggleSidebar={toggleSidebar} NavList={navList} />}
+                    {showSidebar && <Sidebar toggleSidebar={toggleSidebar} NavList={navList} />}
 
-            </nav>
+                </nav>
+            </div>
         </header>
     )
 }

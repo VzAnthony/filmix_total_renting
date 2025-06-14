@@ -10,10 +10,6 @@ const HeaderContainer = () => {
             path: '/'
         },
         {
-            name: 'Top Movies',
-            path: '/top-movies'
-        },
-        {
             name: 'Favorites',
             path: '/favorites'
         },
@@ -21,10 +17,6 @@ const HeaderContainer = () => {
             name: 'Genders',
             path: '/genders'
         },
-        {
-            name: 'Releases',
-            path: '/releases'
-        }
     ]
 
     const toggleSidebar = () => setShowSidebar(!showSidebar)

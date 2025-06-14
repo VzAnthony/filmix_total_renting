@@ -1,7 +1,15 @@
 .header {
     background-color: var(--primary-color);
     display: flex;
+    justify-content: center;
     align-items: center;
+}
+
+.header_container {
+    display: flex;
+    align-items: center;
+    max-width: 1440px;
+    width: 100%;
 }
 
 .menu {
@@ -47,7 +55,7 @@
         width: 100%;
     }
 
-    .nav_items {
+    .nav_list {
         display: none;
     }
 }
