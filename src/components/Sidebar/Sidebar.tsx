@@ -12,7 +12,7 @@ const Sidebar = ({
         <div className={styles.sidebar}>
             <IoCloseOutline className={styles.close} onClick={toggleSidebar} />
             <ul className={styles.nav_items}>
-                {NavList.map(({ name, path }) => <li key={name}><Link to={path}>{name}</Link></li>)}
+                {NavList.map(({ name, path }) => <li key={name} onClick={toggleSidebar}><Link to={path}>{name}</Link></li>)}
             </ul>
         </div>
     )
