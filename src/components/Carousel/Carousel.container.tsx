@@ -1,5 +1,6 @@
 import Carousel from './Carousel'
 import type { CarouselProps } from './Carousel.type';
+import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 import styles from './Carousel.styles.module.css'
 
 const CarouselContainer = ({
@@ -11,10 +12,10 @@ const CarouselContainer = ({
         <button
             className={`${styles.custom_arrow} ${styles.custom_arrow_prev}`}
             onClick={props.onClick}
-            aria-label="Anterior"
+            aria-label="Previous"
             type="button"
         >
-            &#8592;
+            <IoIosArrowBack />
         </button>
     );
 
@@ -22,10 +23,10 @@ const CarouselContainer = ({
         <button
             className={`${styles.custom_arrow} ${styles.custom_arrow_next}`}
             onClick={props.onClick}
-            aria-label="Siguiente"
+            aria-label="Next"
             type="button"
         >
-            &#8594;
+            <IoIosArrowForward />
         </button>
     );
 
@@ -35,7 +36,7 @@ const CarouselContainer = ({
         infinite: false,
         speed: 500,
         slidesToShow: 6,
-        slidesToScroll: 2,
+        slidesToScroll: 6,
         nextArrow: <NextArrow />,
         prevArrow: <PrevArrow />,
         responsive: [
@@ -43,21 +44,21 @@ const CarouselContainer = ({
                 breakpoint: 1200,
                 settings: {
                     slidesToShow: 5,
-                    slidesToScroll: 2,
+                    slidesToScroll: 5,
                 },
             },
             {
                 breakpoint: 930,
                 settings: {
                     slidesToShow: 4,
-                    slidesToScroll: 2,
+                    slidesToScroll: 4,
                 },
             },
             {
                 breakpoint: 700,
                 settings: {
                     slidesToShow: 4,
-                    slidesToScroll: 2,
+                    slidesToScroll: 4,
                 },
             },
             {

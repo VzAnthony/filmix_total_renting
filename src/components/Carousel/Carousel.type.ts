@@ -1,8 +1,7 @@
-import type { ReactNode } from "react"
 import type { Settings } from "react-slick";
 
 
 export interface CarouselProps {
-    children?: ReactNode;
+    children?: React.ReactNode;
     settings?: Settings;
 }
