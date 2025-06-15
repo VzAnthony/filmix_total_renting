@@ -14,7 +14,7 @@ export const tmdbApi = {
     }),
 
     getMovieDetails: (movieId: string) => ({
-        url: `${BASE_URL}/movie/${movieId}?append_to_response=credits,videos,images`,
+        url: `${BASE_URL}/movie/${movieId}?append_to_response=credits,videos,images,similar`,
         options: {
             method: "GET",
             headers: {
@@ -33,5 +33,17 @@ export const tmdbApi = {
                 Authorization: `Bearer ${API_KEY}`
             }
         }
-    })
+    }),
+    getMoviesByIds: (ids: number[]) => {
+        return ids.map(id => ({
+            url: `${BASE_URL}/movie/${id}?append_to_response=credits,videos,images`,
+            options: {
+                method: "GET",
+                headers: {
+                    accept: "application/json",
+                    Authorization: `Bearer ${API_KEY}`
+                }
+            }
+        }));
+    }
 };
