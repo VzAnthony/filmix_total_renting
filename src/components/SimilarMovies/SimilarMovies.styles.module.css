@@ -1,5 +1,5 @@
 .poster_item {
-    width: 180px;
+    width: 11.25rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -8,7 +8,7 @@
 }
 
 .poster_picture {
-    width: 500px;
+    width: 10rem;
     height: auto;
     border-radius: 8px;
     object-fit: cover;
