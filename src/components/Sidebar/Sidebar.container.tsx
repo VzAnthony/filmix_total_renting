@@ -1,14 +1,10 @@
 import Sidebar from './Sidebar'
-
-interface SidebarProps {
-    NavList: { name: string, path: string }[]
-    toggleSidebar: () => void
-}
+import type { InterfaceSidebarProps } from './Sidebar.type'
 
 const SidebarContainer = ({
     NavList,
     toggleSidebar
-}: SidebarProps) => {
+}: InterfaceSidebarProps) => {
     return (
         <Sidebar toggleSidebar={toggleSidebar} NavList={NavList} />
     )

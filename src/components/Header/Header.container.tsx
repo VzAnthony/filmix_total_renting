@@ -13,10 +13,6 @@ const HeaderContainer = () => {
             name: 'Favorites',
             path: '/favorites'
         },
-        {
-            name: 'Genders',
-            path: '/genders'
-        },
     ]
 
     const toggleSidebar = () => setShowSidebar(!showSidebar)

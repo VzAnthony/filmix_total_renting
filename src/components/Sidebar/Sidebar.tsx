@@ -1,16 +1,12 @@
 import { IoCloseOutline } from "react-icons/io5";
-import styles from './Sidebar.styles.module.css'
 import { Link } from "react-router-dom";
-
-interface SidebarProps {
-    NavList: { name: string, path: string }[]
-    toggleSidebar: () => void
-}
+import type { InterfaceSidebarProps } from "./Sidebar.type";
+import styles from './Sidebar.styles.module.css'
 
 const Sidebar = ({
     NavList,
     toggleSidebar
-}: SidebarProps) => {
+}: InterfaceSidebarProps) => {
 
     return (
         <div className={styles.sidebar}>
