@@ -7,7 +7,7 @@
     display: flex;
     width: 100%;
     z-index: 2;
-    left: 50%;
+    left: 55%;
     transform: translateX(-50%) translateY(50%);
 }
 
@@ -48,4 +48,14 @@
     margin: 0 0.4em;
     color: var(--primary-text-color);
     font-size: 1.1em;
+}
+
+@media (max-width: 600px) {
+    .breadcrumbs {
+        font-size: 0.85rem;
+    }
+
+    .breadcrumb_item {
+        font-size: 1.1rem;
+    }
 }
