@@ -1,4 +1,4 @@
-import Movie from "../Movie/Movie"
+import Movie from "../Movie/Movie.container"
 import type { InterfaceMovieListProps } from "./MovieList.type"
 import styles from "./MovieList.styles.module.css"
 
