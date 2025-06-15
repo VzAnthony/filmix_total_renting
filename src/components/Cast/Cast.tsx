@@ -1,5 +1,5 @@
 import type { CastProps } from "./Cast.type";
-import Styles from "./Cast.styles.module.css";
+import styles from "./Cast.styles.module.css";
 import Carousel from "../Carousel/Carousel.container";
 
 
@@ -9,9 +9,9 @@ const Cast = ({ castData }: CastProps) => {
         <Carousel>
             {
                 castData?.map(({ id, name, profile_path }) => (
-                    <div className={Styles.cast_item} key={id}>
+                    <div className={styles.cast_item} key={id}>
                         <img
-                            className={Styles.cast_picture}
+                            className={styles.cast_picture}
                             src={
                                 profile_path
                                     ? `https://image.tmdb.org/t/p/w185/${profile_path}`
@@ -19,7 +19,7 @@ const Cast = ({ castData }: CastProps) => {
                             }
                             alt={name}
                         />
-                        <p className={Styles.cast_name}>{name}</p>
+                        <p className={styles.cast_name}>{name}</p>
                     </div>
                 ))
             }
