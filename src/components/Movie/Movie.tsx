@@ -16,8 +16,14 @@ const Movie = ({
                 </picture>
             </Link>
             <h3>{movie.original_title}</h3>
-            <p><FaCalendarAlt />{movie.release_date}</p>
-            <p><BiSolidLike />{movie.popularity}</p>
+            <div className={styles.movie_info}>
+                <FaCalendarAlt />
+                <p>{movie.release_date}</p>
+            </div>
+            <div className={styles.movie_info}>
+                <BiSolidLike />
+                <p>{movie.popularity}</p>
+            </div>
         </div>
     )
 }
