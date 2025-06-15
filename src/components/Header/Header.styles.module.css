@@ -14,7 +14,7 @@
 
 .menu {
     display: none;
-    font-size: 48px;
+    font-size: 3rem;
 }
 
 .picture {
@@ -28,13 +28,13 @@
 }
 
 .nav_list {
-    margin-left: 16px;
+    margin-left: 1rem;
     display: flex;
     list-style: none;
     justify-content: center;
     align-items: center;
     height: 100%;
-    gap: 16px;
+    gap: 1rem;
 }
 
 .nav_list a {
@@ -44,7 +44,7 @@
 
 @media (max-width: 768px) {
     .menu {
-        padding-left: 16px;
+        padding-left: 1rem;
         display: block;
         position: absolute;
         color: var(--primary-text-color);

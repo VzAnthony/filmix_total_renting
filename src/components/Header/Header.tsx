@@ -1,20 +1,15 @@
 import { HiOutlineMenu } from "react-icons/hi";
 import logo from '../../assets/logo.png'
-import styles from './Header.styles.module.css'
 import Sidebar from "../Sidebar/Sidebar.container";
 import { Link } from "react-router-dom";
-
-interface HeaderProps {
-    showSidebar: boolean
-    toggleSidebar: () => void
-    navList: { name: string, path: string }[]
-}
+import type { InterfaceHeaderProps } from "./Header.type";
+import styles from './Header.styles.module.css'
 
 const Header = ({
     showSidebar,
     toggleSidebar,
     navList
-}: HeaderProps) => {
+}: InterfaceHeaderProps) => {
 
     return (
         <header className={styles.header}>
