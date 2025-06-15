@@ -10,10 +10,10 @@ const SimilarMoviesContainer = ({
         slidesToScroll: 4,
         responsive: [
             {
-                breakpoint: 1050,
+                breakpoint: 1250,
                 settings: {
-                    slidesToShow: 4,
-                    slidesToScroll: 4,
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
                 },
             },
             {

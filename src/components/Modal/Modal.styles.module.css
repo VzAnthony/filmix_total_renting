@@ -15,10 +15,10 @@
     background: var(--primary-text-color);
     color: var(--primary-color);
     border-radius: 1rem;
-    max-width: 1440px;
+    width: 90%;
+    max-width: 800px;
     max-height: 90vh;
-    width: auto;
-    padding: 2rem;
+    padding: 1.9rem;
     box-shadow: 0 8px 32px rgba(20, 30, 48, 0.28);
     overflow-y: auto;
     position: relative;
