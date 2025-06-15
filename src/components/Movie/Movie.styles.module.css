@@ -1,5 +1,5 @@
 .movie {
-    border-radius: 8px;
+    border-radius: .5rem;
     width: 100%;
 }
 
@@ -9,7 +9,7 @@
 }
 
 .movie_picture img {
-    border-radius: 8px;
+    border-radius: .5rem;
     width: 100%;
     height: auto;
     box-shadow: 0 0 30px #000;
@@ -24,13 +24,13 @@
     right: 0;
     background-color: rgba(0, 0, 0, 0.8);
     color: #fff;
-    border-radius: 8px;
+    border-radius: .5rem;
     display: block;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
-    padding: 8px;
+    padding: .5rem;
     visibility: hidden;
 }
 

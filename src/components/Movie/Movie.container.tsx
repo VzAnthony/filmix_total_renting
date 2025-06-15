@@ -1,19 +1,9 @@
 import Movie from "./Movie"
-
-interface MovieContainerProps {
-    movie: {
-        id: number,
-        original_title: string,
-        overview: string,
-        poster_path: string,
-        release_date: string,
-        popularity: number
-    }
-}
+import type { InterfaceMovieContainerProps } from "./Movie.type"
 
 const MovieContainer = ({
     movie
-}: MovieContainerProps) => {
+}: InterfaceMovieContainerProps) => {
     return (
         <Movie movie={movie} />
     )
