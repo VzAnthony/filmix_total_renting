@@ -14,7 +14,7 @@ const Cast = ({ castData }: CastProps) => {
                             className={Styles.cast_picture}
                             src={
                                 profile_path
-                                    ? `https://image.tmdb.org/t/p/w500/${profile_path}`
+                                    ? `https://image.tmdb.org/t/p/w185/${profile_path}`
                                     : "/placeholder.jpg"
                             }
                             alt={name}

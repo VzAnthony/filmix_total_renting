@@ -1,6 +1,6 @@
 export { default as Header } from './Header/Header.container'
 export { default as Movie } from './Movie/Movie.container'
-export { default as Cast } from './Actors/Cast.container'
+export { default as Cast } from './Cast/Cast.container'
 export { default as Carousel } from './Carousel/Carousel.container'
 export { default as SimilarMovies } from './SimilarMovies/SimilarMovies.container'
 export { default as Tag } from './Tag/Tag.container'
