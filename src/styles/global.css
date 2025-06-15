@@ -6,15 +6,34 @@
   padding: 0;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 body {
   font-family: system-ui, sans-serif;
   line-height: 1.5;
 }
 
+
 section {
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
+  padding-top: 2.5rem;
+  min-height: 0;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background:
+    linear-gradient(120deg, rgba(36, 41, 46, 0.95) 0%, rgba(20, 22, 30, 0.98) 100%),
+    repeating-linear-gradient(45deg, #232526 0px, #232526 2px, transparent 2px, transparent 8px);
+  color: var(--primary-text-color);
 }
 
 ul {
