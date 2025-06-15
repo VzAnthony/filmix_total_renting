@@ -1,28 +1,30 @@
 import { BiSolidLike } from 'react-icons/bi';
-import { Cast, Posters, Tag } from '../../components';
-import type { MovieDetailsData } from './MovieDetails.Type'
+import { Cast, Modal, SimilarMovies, Spinner, Tag, VideoTrailer } from '../../components';
+import type { InterfaceMovieDetailsProps } from './MovieDetails.Type'
 import styles from './MovieDetails.styles.module.css'
-interface MovieDetailsProps {
-    movieDetailsData: MovieDetailsData | null,
-    isLoading: boolean,
-    isError: boolean
-    isFavorite: (id: number) => boolean,
-    toggleFavorite: (id: number) => void
-}
+
 const MovieDetail = ({
     movieDetailsData,
     isLoading,
-    isError,
     isFavorite,
-    toggleFavorite
-}: MovieDetailsProps) => {
+    toggleFavorite,
+    isOpen,
+    openModal,
+    closeModal
+}: InterfaceMovieDetailsProps) => {
+
+    const backgroundStyle = {
+        backgroundImage:
+            `linear-gradient(to bottom, rgba(20,30,48,0.85) 0%, rgba(36,59,85,0.82) 100%),
+            url(${movieDetailsData?.backdrop_path ? `https://image.tmdb.org/t/p/original/${movieDetailsData?.poster_path}` : ""})`
+    }
+
+    if (isLoading) {
+        return <Spinner />
+    }
+
     return (
-        <section className={styles.movie_details_bg} style={{
-            backgroundImage: `
-                    linear-gradient(to bottom, rgba(20,30,48,0.85) 0%, rgba(36,59,85,0.82) 100%),
-      url(${movieDetailsData?.backdrop_path ? `https://image.tmdb.org/t/p/w500/${movieDetailsData?.poster_path}` : ""})
-    `
-        }}>
+        <section className={styles.movie_details_bg} style={backgroundStyle}>
             <div className={styles.poster_container}>
                 <img src={`https://image.tmdb.org/t/p/original/${movieDetailsData?.poster_path}`} alt="Poster movie" />
             </div>
@@ -46,13 +48,17 @@ const MovieDetail = ({
                                 :
                                 <button className={`${styles.button} ${styles.button_favorite}`} onClick={() => toggleFavorite(movieDetailsData?.id || 0)}>Add to favorite</button>
                         }
-                        {/* <button className={`${styles.button} ${styles.button_favorite}`}>Add to favorite</button> */}
-                        <button className={`${styles.button} ${styles.button_trailer}`}>Trailer</button>
+                        <button className={`${styles.button} ${styles.button_trailer}`} onClick={openModal}>Trailer</button>
+                        <Modal isOpen={isOpen} onClose={closeModal}>
+                            <VideoTrailer videos={movieDetailsData?.videos.results || []} />
+                        </Modal>
                     </div>
                 </div>
                 <div>
-                    <h3>Cast</h3>
+                    <h3 className={styles.movie_subtitle}>Cast</h3>
                     <Cast castData={movieDetailsData?.credits.cast} />
+                    <h3 className={styles.movie_subtitle}>Similar Movies</h3>
+                    <SimilarMovies similarMovieData={movieDetailsData?.similar.results || []} />
                 </div>
             </div>
         </section>

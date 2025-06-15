@@ -1,3 +1,13 @@
+export interface InterfaceMovieDetailsProps {
+    movieDetailsData: MovieDetailsData | null,
+    isLoading: boolean,
+    isFavorite: (id: number) => boolean,
+    toggleFavorite: (id: number) => void
+    isOpen: boolean,
+    openModal: () => void,
+    closeModal: () => void
+}
+
 export interface MovieDetailsData {
     adult: boolean
     backdrop_path: string
@@ -28,6 +38,7 @@ export interface MovieDetailsData {
     credits: Credits
     videos: Videos
     images: Images
+    similar: Similar
 }
 
 export interface BelongsToCollection {
@@ -145,4 +156,28 @@ export interface Poster {
     vote_average: number
     vote_count: number
     width: number
+}
+
+export interface Similar {
+    page: number
+    results: SimilarMoviesData[]
+    total_pages: number
+    total_results: number
+}
+
+export interface SimilarMoviesData {
+    adult: boolean
+    backdrop_path?: string
+    genre_ids: number[]
+    id: number
+    original_language: string
+    original_title: string
+    overview: string
+    popularity: number
+    poster_path: string
+    release_date: string
+    title: string
+    video: boolean
+    vote_average: number
+    vote_count: number
 }
