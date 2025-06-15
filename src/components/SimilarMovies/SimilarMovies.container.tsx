@@ -10,17 +10,17 @@ const SimilarMoviesContainer = ({
         slidesToScroll: 4,
         responsive: [
             {
-                breakpoint: 1340,
+                breakpoint: 1050,
                 settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
+                    slidesToShow: 4,
+                    slidesToScroll: 4,
                 },
             },
             {
-                breakpoint: 994,
+                breakpoint: 1050,
                 settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
+                    slidesToShow: 4,
+                    slidesToScroll: 4,
                 },
             },
             {
@@ -31,10 +31,17 @@ const SimilarMoviesContainer = ({
                 },
             },
             {
-                breakpoint: 493,
+                breakpoint: 520,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 2,
+                },
+            },
+            {
+                breakpoint: 350,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
                 },
             },
         ],
